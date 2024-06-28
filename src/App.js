@@ -1,26 +1,26 @@
-// App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Homepage from './pages/homepage/homepage';
-import Container from './components/container/container';
-// import ScanSkin from './components/scan-skin';
-// import Contact from './components/Contact';
-import Navbar from './components/Navbar/navbar';
+// import Home from "./components/Home";
+// import UserAuth from "./components/UserAuth";
+// import HospitalAuth from "./components/HospitalAuth";
+import Navbar from "./components/Navbar";
+// import HospitalProfile from "./components/HospitalProfile";
+// import HospitalProfileEdit from "./components/HospitalProfileEdit";
+// import HospitalDashboard from "./components/HospitalDashboard";
+
+// import { Context } from "./Store";
+// import Dashboard from "./components/Landing";
+import ViewMap from "./components/ViewMap";
+
 import './App.css';
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Container>
-        <Navbar />
-        </Container>
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          {/* <Route path="/scan-skin" element={<ScanSkin />} />
-          <Route path="/contact" element={<Contact />} /> */}
-        </Routes>
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path="/map" element={<ViewMap />} />
+      </Routes>
     </Router>
   );
 }
